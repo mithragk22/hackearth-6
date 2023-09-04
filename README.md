@@ -73,7 +73,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ## Install Node & npm if not installed already,
 Open the URL in browser,
-## https://nodejs.org/dist/latest-v16.x/ and dowonload, https://nodejs.org/dist/latest-v16.x/node-v16.20.2-x64.msi
+## Download, https://nodejs.org/dist/latest-v16.x/node-v16.20.2-x64.msi
 ## set NODE_OPTIONS=--openssl-legacy-provider (optional)
 
 ## Install git (optional), 
