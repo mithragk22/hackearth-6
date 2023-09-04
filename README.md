@@ -71,10 +71,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### Prequistes
 
-Install Node & npm if not installed already,
+## Install Node & npm if not installed already,
 Follow this documentation for windows installation, [https://nodejs.org/dist/v18.17.1/node-v18.17.1-x64.msi](https://nodejs.org/en/download)https://nodejs.org/en/download
-This will download node & npm, 
-Install git (optional), https://git-scm.com/download/win
+
+## Install git (optional), 
+Follow this documentation for git download, https://git-scm.com/download/win
 
 **Note: If node & npm not available on then set the public path**
 
