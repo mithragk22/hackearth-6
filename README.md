@@ -68,3 +68,23 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### Prequistes
+
+## Install Node & npm if not installed already,
+> Download, https://nodejs.org/dist/latest-v16.x/node-v16.20.2-x64.msi
+
+> set NODE_OPTIONS=--openssl-legacy-provider (optional)
+
+## Install git (optional), 
+Follow this documentation for git download, https://git-scm.com/download/win
+
+**Note: If node & npm not available on then set the public path**
+
+### `echo $PATH`
+### `nano ~/.bash_profile`
+### `export PATH="path/to/npm:$PATH"`
+### `source ~/.bash_profile`
+### `npm update -g npm` (optional)
+
+
