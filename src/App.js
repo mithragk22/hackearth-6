@@ -31,7 +31,7 @@ function App() {
           Learn React
         </a>
       </header> */}
-    <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary"  style={{ background:"#5a287d"}}>
+    <Navbar collapseOnSelect expand="lg" style={{ background:"#5a287d"}}>
       <Nav>
       <Navbar.Brand style={{ color: 'white'}}>The Green Elements</Navbar.Brand>
             <Nav.Link href="/home" style={{ color: 'white'}}>Home</Nav.Link>
