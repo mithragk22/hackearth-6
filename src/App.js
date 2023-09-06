@@ -8,6 +8,7 @@ import Explore from './Explore';
 import Mailbox from './Mailbox';
 import Quiz from './Quiz';
 import { BrowserRouter , Routes, Route} from 'react-router-dom';
+import FutureWork from './FutureWork';
 
 
 function App() {
@@ -44,6 +45,9 @@ function App() {
             <Nav.Link eventKey={2}  href="/mailbox" style={{ color: 'white'}}>
               Mailbox
             </Nav.Link>
+            <Nav.Link eventKey={2}  href="/futureWork" style={{ color: 'white'}}>
+              Future Work
+            </Nav.Link>
           </Nav>
           </Navbar>
           <div>
@@ -54,7 +58,8 @@ function App() {
         <Route exact path="/solution" element={<Solution />} />
         <Route path="/explore" element={<Explore />} />
         <Route path="/mailbox" element={<Mailbox />} />
-        <Route path="/quiz" element={<Quiz />} />   
+        <Route path="/quiz" element={<Quiz />} /> 
+        <Route path="/futureWork" element={<FutureWork />} />    
       </Routes>
     </BrowserRouter>
     </div>

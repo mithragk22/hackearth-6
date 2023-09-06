@@ -37,7 +37,7 @@ const Explore = () => {
                         {showtwo ? <button class="align-self-center" style={{ backgroundColor: "#5a287d", color: "white" }} onClick={display_3}>leave seen</button>:""}
                         {showtwo ? <div style={{ padding: '20px', marginLeft: "100px" }}><img src={mail_data_2} ></img></div>: ""}
                     </div>
-                    <div class="d-flex justify-content-lg-start" style={{marginTop:"50px",marginBottom:"60px"}}>
+                    <div class="d-flex justify-content-lg-start" style={{marginTop:"10px",marginBottom:"60px"}}>
                         {showthree ? <img src={three} height={250} width={250}></img>:""}
                         {showthree ? <button class="align-self-center" style={{ backgroundColor: "#5a287d", color: "white" }} onClick={showSolution}>Solution proposed</button>:""}
                         {showthree ? <div className='step_3'>

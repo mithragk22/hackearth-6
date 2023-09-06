@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
 
 const Quiz = () => {
 
@@ -48,7 +50,9 @@ const setQ5 =(event) =>
     <div>
        <h2 class="d-inline-flex justify-content-center" style={{ margin: "20px", color: '#5a287d', padding: '5px' }} > Let calculate the carbon footprint you created today over Emails</h2>
        
-          
+       <Container>
+            <Row className="justify-content-md-center" style={{textAlign:"left",padding:"10px",marginTop:"30px"}}>
+                  
         <table class="table" style={{textAlign:"left", alignSelf:"center"}}>
           <tr>
             <td  style={{width:"800px"}}>Have you attached a file in email instead of confluence link or shared link?</td>
@@ -80,13 +84,15 @@ const setQ5 =(event) =>
             <td>{q4_ans}</td>
           </tr> */}
           <tr>
-            <td >How many emails you normally send with all the things about?</td>
-            <td style={{width:"2px"}}>
-              <input class="form-check-input" type="number"  id="q5" onChange={setQ5}/>
+            <td>How many emails you normally send with all the things about?</td>
+            <td style={{width:"200px"}}>
+              <input class="form-check-input" type="number"  id="q5" style={{width:"100px",height:"20px"}} onChange={setQ5} placeholder="1"/>
             </td>
             <td>{q5_ans}g</td>
           </tr>
         </table>
+        </Row>
+        </Container>
         <h2 class="d-inline-flex justify-content-center" style={{ color: "white", margin: "20px", backgroundColor: '#5a287d', padding: '5px' }} > Email carbon footprints you created today : {(q1_ans + q2_ans + q3_ans + q4_ans )* q5_ans} g</h2>
        
       

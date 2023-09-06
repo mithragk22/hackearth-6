@@ -25,7 +25,7 @@ const Home = () => {
   }
   return (
     <div>
-      <div  className='logo_border'><img src={logo} height={450} width={1650}></img></div>
+      <div className='logo_border'><img src={logo} height={300} width={1250}></img></div>
       <div className='logo_border1'> Making the world a difference!!</div>
         {/* <Card>
         <Card.Img variant="top" src={logo} style={{borderBlockColor:"black"}}/>

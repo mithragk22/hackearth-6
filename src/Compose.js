@@ -10,6 +10,10 @@ const Compose = () => {
     const [size, setSize] = useState(0)
     const [show, setShow] = useState(false);
     const inputRef = useRef(null);
+    const cc=useRef(null);
+    const to=useRef(null);
+    const subject=useRef(null);
+    const [alert,setAlert]=useState(false)
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -27,13 +31,20 @@ const Compose = () => {
     }
 
     const checkSend = (event) => {
-        
+        setAlert(true)
         if (selectedFile != null)
         {
             setSize((selectedFile.size / 1000000)*19)
             console.log(selectedFile.size)
             setShow(true)
         }
+        
+        subject.current.value = null;
+        to.current.value = null;
+        cc.current.value = null;
+        setTimeout(() => {
+            setAlert(false);
+          }, 160);
     }
 
     const resetFileInput = () => {
@@ -51,12 +62,13 @@ const Compose = () => {
                     <Modal.Title>Green Elements caution!!!</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>The file attached will leave {size} grams of carbon footprint!!  Please share confluence link or shared drive link to avoid this!!!</Modal.Body>
+                
                 <Modal.Footer>
                     <button type="button" className='popup_button' onClick={handleClose}>Close</button> 
                     <button type="button" className='popup_button' onClick={handleCloseWithFile}>Send anyway</button> 
-                </Modal.Footer>
-                </Modal> 
+                </Modal.Footer></Modal>
                         : ""}
+            
             <div class='d-flex flex-row p-2'>
                 <div class="p-2 justify-content-start ">
                     <div class="p-2 d-flex flex-row  justify-content-start">
@@ -66,15 +78,15 @@ const Compose = () => {
                 <div class='d-flex w-100 flex-column'>
                     <div class="p-2 d-flex flex-row  justify-content-start">
                         <label className='label_mail' >To</label>
-                        <input type="text" style={{ width: "100%" }}></input>
+                        <input type="text" ref={to}  style={{ width: "100%" }}></input>
                     </div>
                     <div class="p-2 d-flex flex-row justify-content-start">
                         <label className='label_mail' >Cc</label>
-                        <input type="text" style={{ width: "100%" }}></input>
+                        <input type="text" ref={cc}  style={{ width: "100%" }}></input>
                     </div>
                     <div class="p-2 d-flex flex-row justify-content-start">
-                        <label className='label_mail' >Subject</label>
-                        <input type="text" style={{ width: "100%" }}></input>
+                        <label className='label_mail'> Subject</label>
+                        <input type="text" ref={subject} style={{ width: "100%" }}></input>
                     </div>
                     <div class="p-2 d-flex flex-row justify-content-start">
                         <input ref={inputRef} type="file" className='button_mail' name="file" onChange={changeHandler} />
@@ -82,6 +94,10 @@ const Compose = () => {
                             <X color="white"  size={30} />
                         </button>
                     </div>
+                    {alert ? <div className='popup-box' >
+                        <div className='box'> sent </div> 
+                        </div>
+                    :""}
                 </div>
             </div>
             <div>
