@@ -9,6 +9,8 @@ import Mailbox from './Mailbox';
 import Quiz from './Quiz';
 import { BrowserRouter , Routes, Route} from 'react-router-dom';
 import FutureWork from './FutureWork';
+import logo1 from './images/logo1.jpg'
+import PPT from './PPT';
 
 
 function App() {
@@ -34,7 +36,7 @@ function App() {
       </header> */}
     <Navbar collapseOnSelect expand="lg" style={{ background:"#5a287d"}}>
       <Nav>
-      <Navbar.Brand style={{ color: 'white'}}>The Green Elements</Navbar.Brand>
+      <Navbar.Brand style={{ color: 'white'}}><span><img src={logo1} width={40} height={35} style={{marginLeft:"5px"}}></img> The Green Elements</span></Navbar.Brand>
             <Nav.Link href="/home" style={{ color: 'white'}}>Home</Nav.Link>
             <Nav.Link eventKey={2}  href="/explore" style={{ color: 'white'}}>
               Explore
@@ -48,6 +50,9 @@ function App() {
             <Nav.Link eventKey={2}  href="/futureWork" style={{ color: 'white'}}>
               Future Work
             </Nav.Link>
+            <Nav.Link eventKey={2}  href="/ppt" style={{ color: 'white'}}>
+              PPT
+            </Nav.Link>
           </Nav>
           </Navbar>
           <div>
@@ -59,7 +64,8 @@ function App() {
         <Route path="/explore" element={<Explore />} />
         <Route path="/mailbox" element={<Mailbox />} />
         <Route path="/quiz" element={<Quiz />} /> 
-        <Route path="/futureWork" element={<FutureWork />} />    
+        <Route path="/futureWork" element={<FutureWork />} />  
+        <Route path="/ppt" element={<PPT />} />   
       </Routes>
     </BrowserRouter>
     </div>

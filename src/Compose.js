@@ -59,13 +59,14 @@ const Compose = () => {
         <div class='d-flex flex-column'>
             {size > 0 ? <Modal  show={show} onHide={handleClose} class="d-flex align-items-center">
                 <Modal.Header closeButton>
-                    <Modal.Title>Green Elements caution!!!</Modal.Title>
+                    <Modal.Title>kudos by Green Elements!!!</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>The file attached will leave {size} grams of carbon footprint!!  Please share confluence link or shared drive link to avoid this!!!</Modal.Body>
                 
                 <Modal.Footer>
                     <button type="button" className='popup_button' onClick={handleClose}>Close</button> 
-                    <button type="button" className='popup_button' onClick={handleCloseWithFile}>Send anyway</button> 
+                    <button type="button" className='popup_button' onClick={handleCloseWithFile}>Send Anyway</button> 
+                
                 </Modal.Footer></Modal>
                         : ""}
             
@@ -78,15 +79,15 @@ const Compose = () => {
                 <div class='d-flex w-100 flex-column'>
                     <div class="p-2 d-flex flex-row  justify-content-start">
                         <label className='label_mail' >To</label>
-                        <input type="text" ref={to}  style={{ width: "100%" }}></input>
+                        <input type="text" ref={to}  placeholder='test@test.com' style={{ width: "100%" }}></input>
                     </div>
                     <div class="p-2 d-flex flex-row justify-content-start">
                         <label className='label_mail' >Cc</label>
-                        <input type="text" ref={cc}  style={{ width: "100%" }}></input>
+                        <input type="text" ref={cc}  placeholder='test@test.com' style={{ width: "100%" }}></input>
                     </div>
                     <div class="p-2 d-flex flex-row justify-content-start">
-                        <label className='label_mail'> Subject</label>
-                        <input type="text" ref={subject} style={{ width: "100%" }}></input>
+                        <label className='label_mail' > Subject</label>
+                        <input type="text" ref={subject} placeholder='test' style={{ width: "100%" }}></input>
                     </div>
                     <div class="p-2 d-flex flex-row justify-content-start">
                         <input ref={inputRef} type="file" className='button_mail' name="file" onChange={changeHandler} />
@@ -101,7 +102,7 @@ const Compose = () => {
                 </div>
             </div>
             <div>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" style={{ marginTop: '2%', marginLeft: '0.2%', marginRight: '0.2%', width: '99.5%' }}></textarea>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="7" style={{ marginTop: '2%', marginLeft: '0.2%', marginRight: '0.2%', width: '99.5%' }}></textarea>
             </div>
         </div>
     )

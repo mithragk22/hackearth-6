@@ -30,12 +30,12 @@ const Explore = () => {
                     <div class="d-flex justify-content-lg-start align-items-center">
                         <img src={one} height={250} width={250}></img>
                         <button class="align-self-center" style={{ backgroundColor: "#5a287d", color: "white" }} onClick={display_2}>Send</button>
-                        <br/><div style={{ padding: '20px', marginLeft: "120px" }}><img src={mail_data} ></img></div>
+                        <br/><div style={{ padding: '20px', marginLeft: "70px" }}><img src={mail_data} width={800}></img></div>
                     </div>
                     <div class="d-flex justify-content-lg-start ">
                         {showtwo ? <img src={two} height={250} width={250} style={{marginLeft:"5px"}}></img> :""}
                         {showtwo ? <button class="align-self-center" style={{ backgroundColor: "#5a287d", color: "white" }} onClick={display_3}>leave seen</button>:""}
-                        {showtwo ? <div style={{ padding: '20px', marginLeft: "100px" }}><img src={mail_data_2} ></img></div>: ""}
+                        {showtwo ? <div style={{ padding: '20px', marginLeft: "50px" }}><img src={mail_data_2}  width={800}></img></div>: ""}
                     </div>
                     <div class="d-flex justify-content-lg-start" style={{marginTop:"10px",marginBottom:"60px"}}>
                         {showthree ? <img src={three} height={250} width={250}></img>:""}
