@@ -10,12 +10,22 @@ const Compose = () => {
     const [size, setSize] = useState(0)
     const [show, setShow] = useState(false);
     const inputRef = useRef(null);
+    const url = useRef(null);
     const cc=useRef(null);
     const to=useRef(null);
     const subject=useRef(null);
     const [alert,setAlert]=useState(false)
 
-  const handleClose = () => setShow(false);
+  const handleClose = () => {
+
+    inputRef.current.value = null;
+    
+    url.current.value="https://natwest.atlassian.net/wiki/spaces/email/attachment1"
+        setSelectedFile(null)
+        setSize(0)
+    setShow(false);
+
+  }
   const handleShow = () => setShow(true);
 
     const changeHandler = (event) => {
@@ -64,8 +74,8 @@ const Compose = () => {
                 <Modal.Body>The file attached will leave {size} grams of carbon footprint!!  Please share confluence link or shared drive link to avoid this!!!</Modal.Body>
                 
                 <Modal.Footer>
-                    <button type="button" className='popup_button' onClick={handleClose}>Close</button> 
-                    <button type="button" className='popup_button' onClick={handleCloseWithFile}>Send Anyway</button> 
+                    <button type="button" className='popup_button' onClick={handleClose}>Use Link</button> 
+                    <button type="button" className='popup_button' onClick={handleCloseWithFile}>Use Attachment</button> 
                 
                 </Modal.Footer></Modal>
                         : ""}
@@ -102,7 +112,9 @@ const Compose = () => {
                 </div>
             </div>
             <div>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="7" style={{ marginTop: '2%', marginLeft: '0.2%', marginRight: '0.2%', width: '99.5%' }}></textarea>
+                <textarea class="form-control" ref={url} id="exampleFormControlTextarea1" rows="7" style={{ marginTop: '2%', marginLeft: '0.2%', marginRight: '0.2%', width: '99.5%'}}>
+                    
+                </textarea>
             </div>
         </div>
     )

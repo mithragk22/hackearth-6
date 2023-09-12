@@ -38,9 +38,9 @@ function App() {
       <Nav>
       <Navbar.Brand style={{ color: 'white'}}><span><img src={logo1} width={40} height={35} style={{marginLeft:"5px"}}></img> The Green Elements</span></Navbar.Brand>
             <Nav.Link href="/home" style={{ color: 'white'}}>Home</Nav.Link>
-            <Nav.Link eventKey={2}  href="/explore" style={{ color: 'white'}}>
+            {/* <Nav.Link eventKey={2}  href="/explore" style={{ color: 'white'}}>
               Explore
-            </Nav.Link>
+            </Nav.Link> */}
             <Nav.Link eventKey={2}  href="/solution" style={{ color: 'white'}}>
               Solution
             </Nav.Link>
@@ -48,11 +48,17 @@ function App() {
               Mailbox
             </Nav.Link>
             <Nav.Link eventKey={2}  href="/futureWork" style={{ color: 'white'}}>
-              Future Work
+              Road Map
             </Nav.Link>
             <Nav.Link eventKey={2}  href="/ppt" style={{ color: 'white'}}>
-              PPT
+              System Criteria
             </Nav.Link>
+             {/* <Nav.Link eventKey={2}  href="/ppt" style={{ color: 'white'}}>
+              PPT
+            </Nav.Link> */}
+             {/* <Nav.Link eventKey={2}  href="/ppt" style={{ color: 'white'}}>
+              PPT
+            </Nav.Link> */}
           </Nav>
           </Navbar>
           <div>
